@@ -59,5 +59,5 @@ Examples
 
 ::
 
-  bitcoin-cli estimatesmartfee 6
+  digibyte-cli estimatesmartfee 6
 

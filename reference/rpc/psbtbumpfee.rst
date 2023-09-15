@@ -90,5 +90,5 @@ Examples
 
 Bump the fee, get the new transaction'spsbt::
 
-  bitcoin-cli psbtbumpfee <txid>
+  digibyte-cli psbtbumpfee <txid>
 

@@ -100,17 +100,17 @@ Examples
 
 Create a transaction with no inputs::
 
-  bitcoin-cli createrawtransaction "[]" "{\"myaddress\":0.01}"
+  digibyte-cli createrawtransaction "[]" "{\"myaddress\":0.01}"
 
 Add sufficient unsigned inputs to meet the output value::
 
-  bitcoin-cli fundrawtransaction "rawtransactionhex"
+  digibyte-cli fundrawtransaction "rawtransactionhex"
 
 Sign the transaction::
 
-  bitcoin-cli signrawtransactionwithwallet "fundedtransactionhex"
+  digibyte-cli signrawtransactionwithwallet "fundedtransactionhex"
 
 Send the transaction::
 
-  bitcoin-cli sendrawtransaction "signedtransactionhex"
+  digibyte-cli sendrawtransaction "signedtransactionhex"
 

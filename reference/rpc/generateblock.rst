@@ -48,5 +48,5 @@ Examples
 
 Generate a block to myaddress, with txs rawtx and mempool_txid::
 
-  bitcoin-cli generateblock "myaddress" '["rawtx", "mempool_txid"]'
+  digibyte-cli generateblock "myaddress" '["rawtx", "mempool_txid"]'
 

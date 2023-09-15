@@ -25,7 +25,7 @@ class CommandList:
 
 
 class HelpParser:
-    '''A parser for the Bitcoin Core RPC command line help'''
+    '''A parser for the DigiByte Core RPC command line help'''
 
     Section = Enum(
         'Section', 'command description result literal_result past_result '

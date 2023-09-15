@@ -33,17 +33,17 @@ Examples
 
 List all labels::
 
-  bitcoin-cli listlabels
+  digibyte-cli listlabels
 
 List labels that have receiving addresses::
 
-  bitcoin-cli listlabels receive
+  digibyte-cli listlabels receive
 
 List labels that have sending addresses::
 
-  bitcoin-cli listlabels send
+  digibyte-cli listlabels send
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "listlabels", "params": [receive]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "listlabels", "params": [receive]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

@@ -38,13 +38,13 @@ Examples
 
 ::
 
-  bitcoin-cli dumpprivkey "myaddress"
+  digibyte-cli dumpprivkey "myaddress"
 
 ::
 
-  bitcoin-cli importprivkey "mykey"
+  digibyte-cli importprivkey "mykey"
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "dumpprivkey", "params": ["myaddress"]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "dumpprivkey", "params": ["myaddress"]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

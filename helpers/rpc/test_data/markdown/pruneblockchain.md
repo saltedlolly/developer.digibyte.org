@@ -39,7 +39,7 @@ The `pruneblockchain` RPC {{summary_pruneBlockChain}}
 *Example*
 
 {% highlight bash %}
-bitcoin-cli pruneblockchain 1000
+digibyte-cli pruneblockchain 1000
 {% endhighlight %}
 
 *See also*

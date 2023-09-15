@@ -56,5 +56,5 @@ Examples
 
 ::
 
-  bitcoin-cli analyzepsbt "psbt"
+  digibyte-cli analyzepsbt "psbt"
 

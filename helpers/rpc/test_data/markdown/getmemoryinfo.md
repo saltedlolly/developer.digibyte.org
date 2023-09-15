@@ -45,7 +45,7 @@ The `getmemoryinfo` RPC {{summary_getMemoryInfo}}
 *Example*
 
 {% highlight bash %}
-bitcoin-cli getmemoryinfo
+digibyte-cli getmemoryinfo
 {% endhighlight %}
 
 *See also*

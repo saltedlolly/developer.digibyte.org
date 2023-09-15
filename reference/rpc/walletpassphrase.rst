@@ -43,13 +43,13 @@ Examples
 
 Unlock the wallet for 60 seconds::
 
-  bitcoin-cli walletpassphrase "my pass phrase" 60
+  digibyte-cli walletpassphrase "my pass phrase" 60
 
 Lock the wallet again (before 60 seconds)::
 
-  bitcoin-cli walletlock
+  digibyte-cli walletlock
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "walletpassphrase", "params": ["my pass phrase", 60]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "walletpassphrase", "params": ["my pass phrase", 60]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

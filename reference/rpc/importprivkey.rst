@@ -51,21 +51,21 @@ Examples
 
 Dump a private key::
 
-  bitcoin-cli dumpprivkey "myaddress"
+  digibyte-cli dumpprivkey "myaddress"
 
 Import the private key with rescan::
 
-  bitcoin-cli importprivkey "mykey"
+  digibyte-cli importprivkey "mykey"
 
 Import using a label and without rescan::
 
-  bitcoin-cli importprivkey "mykey" "testing" false
+  digibyte-cli importprivkey "mykey" "testing" false
 
 Import using default blank label and without rescan::
 
-  bitcoin-cli importprivkey "mykey" "" false
+  digibyte-cli importprivkey "mykey" "" false
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "importprivkey", "params": ["mykey", "testing", false]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "importprivkey", "params": ["mykey", "testing", false]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

@@ -63,5 +63,5 @@ Examples
 
 ::
 
-  bitcoin-cli walletprocesspsbt "psbt"
+  digibyte-cli walletprocesspsbt "psbt"
 

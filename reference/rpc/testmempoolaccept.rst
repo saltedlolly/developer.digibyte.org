@@ -62,17 +62,17 @@ Examples
 
 Create a transaction::
 
-  bitcoin-cli createrawtransaction "[{\"txid\" : \"mytxid\",\"vout\":0}]" "{\"myaddress\":0.01}"
+  digibyte-cli createrawtransaction "[{\"txid\" : \"mytxid\",\"vout\":0}]" "{\"myaddress\":0.01}"
 
 Sign the transaction, and get back the hex::
 
-  bitcoin-cli signrawtransactionwithwallet "myhex"
+  digibyte-cli signrawtransactionwithwallet "myhex"
 
 Test acceptance of the transaction (signed hex)::
 
-  bitcoin-cli testmempoolaccept '["signedhex"]'
+  digibyte-cli testmempoolaccept '["signedhex"]'
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "testmempoolaccept", "params": [["signedhex"]]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "testmempoolaccept", "params": [["signedhex"]]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

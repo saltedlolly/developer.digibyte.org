@@ -68,7 +68,7 @@ def test_parse_help():
     assert result["results"] == [{'format': 'table', 'title_extension': '',
                                   'name': "hex", "type": "string",
                                   "description": "the result, hex encoded"}]
-    assert result["examples"] == ["> bitcoin-cli examplecommand foo",
+    assert result["examples"] == ["> digibyte-cli examplecommand foo",
                                   "> curl --user myusername --data-binary someargs"]
 
 

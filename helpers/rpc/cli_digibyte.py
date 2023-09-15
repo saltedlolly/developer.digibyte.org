@@ -6,12 +6,12 @@ import sys
 from pathlib import Path
 
 
-class CliBitcoin:
+class CliDigiByte:
     def __init__(self):
-        cli_path = os.environ.get("BITCOIN_CLI_PATH")
+        cli_path = os.environ.get("DIGIBYTE_CLI_PATH")
         if not cli_path:
-            sys.exit("BITCOIN_CLI_PATH is not set. Set this to the command to "
-                     "run the bitcoin-cli including any options. Exiting now.")
+            sys.exit("DIGIBYTE_CLI_PATH is not set. Set this to the command to "
+                     "run the digibyte-cli including any options. Exiting now.")
 
         self.cli_path = Path(cli_path.split(" ")[0])
 #        self.cli_path = Path(cli_path.split(" ")[0]).expanduser()

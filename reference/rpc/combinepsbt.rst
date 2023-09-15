@@ -45,5 +45,5 @@ Examples
 
 ::
 
-  bitcoin-cli combinepsbt '["mybase64_1", "mybase64_2", "mybase64_3"]'
+  digibyte-cli combinepsbt '["mybase64_1", "mybase64_2", "mybase64_3"]'
 

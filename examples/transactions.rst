@@ -19,7 +19,7 @@ Bitcoin Core provides several `RPCs <../reference/rpc/index.html>`__ which handl
 
 ::
 
-   > bitcoin-cli -regtest getnewaddress
+   > digibyte-cli -regtest getnewaddress
    mvbnrCX3bg1cDRUu8pkecrvP6vQkSLDSou
 
    > NEW_ADDRESS=mvbnrCX3bg1cDRUu8pkecrvP6vQkSLDSou
@@ -30,7 +30,7 @@ Get a new Bitcoin address and save it in the shell variable ``$NEW_ADDRESS``.
 
 ::
 
-   > bitcoin-cli -regtest sendtoaddress $NEW_ADDRESS 10.00
+   > digibyte-cli -regtest sendtoaddress $NEW_ADDRESS 10.00
    263c018582731ff54dc72c7d67e858c002ae298835501d80200f05753de0edf0
 
 Send 10 bitcoins to the address using the `“sendtoaddress” RPC <../reference/rpc/sendtoaddress.html>`__. The returned hex string is the transaction identifier (txid).
@@ -41,7 +41,7 @@ The `“sendtoaddress” RPC <../reference/rpc/sendtoaddress.html>`__ automatica
 
 ::
 
-   > bitcoin-cli -regtest listunspent
+   > digibyte-cli -regtest listunspent
    [
    ]
 
@@ -53,7 +53,7 @@ Use the `“listunspent” RPC <../reference/rpc/listunspent.html>`__ to display
 
    ::
 
-      > bitcoin-cli -regtest listunspent 0
+      > digibyte-cli -regtest listunspent 0
 
    .. highlight:: json
 
@@ -93,7 +93,7 @@ Re-running the `“listunspent” RPC <../reference/rpc/listunspent.html>`__ wit
 
 ::
 
-   > bitcoin-cli -regtest -generate 1
+   > digibyte-cli -regtest -generate 1
 
    > unset NEW_ADDRESS
 
@@ -112,7 +112,7 @@ This subsection covers one of the simplest possible raw transactions.
 
    ::
 
-      > bitcoin-cli -regtest listunspent
+      > digibyte-cli -regtest listunspent
 
    .. highlight:: json
 
@@ -171,7 +171,7 @@ Re-run `“listunspent” <../reference/rpc/listunspent.html>`__. We now have th
 
 ::
 
-   > bitcoin-cli -regtest getnewaddress
+   > digibyte-cli -regtest getnewaddress
    mz6KvC4aoUeo6wSxtiVQTo7FDwPnkp6URG
 
    > NEW_ADDRESS=mz6KvC4aoUeo6wSxtiVQTo7FDwPnkp6URG
@@ -183,7 +183,7 @@ Get a new address to use in the raw transaction.
 ::
 
    ## Outputs - inputs = transaction fee, so always double-check your math!
-   > bitcoin-cli -regtest createrawtransaction '''
+   > digibyte-cli -regtest createrawtransaction '''
        [
          {
            "txid": "'$UTXO_TXID'",
@@ -210,7 +210,7 @@ Using two arguments to the `“createrawtransaction” RPC <../reference/rpc/cre
 
    ::
 
-      > bitcoin-cli -regtest decoderawtransaction $RAW_TX
+      > digibyte-cli -regtest decoderawtransaction $RAW_TX
 
    .. highlight:: json
 
@@ -263,7 +263,7 @@ Use the `“decoderawtransaction” RPC <../reference/rpc/decoderawtransaction.h
 
    ::
 
-      > bitcoin-cli -regtest signrawtransaction $RAW_TX
+      > digibyte-cli -regtest signrawtransaction $RAW_TX
 
    .. highlight:: json
 
@@ -294,7 +294,7 @@ Even though the transaction is now complete, the Bitcoin Core node we’re conne
 
 ::
 
-   > bitcoin-cli -regtest sendrawtransaction $SIGNED_RAW_TX
+   > digibyte-cli -regtest sendrawtransaction $SIGNED_RAW_TX
    c7736a0a0046d5a8cc61c8c3c2821d4d7517f5de2bc66a966011aaa79965ffba
 
 Send the signed transaction to the connected node using the `“sendrawtransaction” RPC <../reference/rpc/sendrawtransaction.html>`__. After accepting the transaction, the node would usually then broadcast it to other peers, but we’re not currently connected to other peers because we started in regtest mode.
@@ -303,7 +303,7 @@ Send the signed transaction to the connected node using the `“sendrawtransacti
 
 ::
 
-   > bitcoin-cli -regtest -generate 1
+   > digibyte-cli -regtest -generate 1
 
    > unset UTXO_TXID UTXO_VOUT NEW_ADDRESS RAW_TX SIGNED_RAW_TX
 
@@ -320,7 +320,7 @@ In this example, we’ll create a transaction with two inputs and two outputs. W
 
    ::
 
-      > bitcoin-cli -regtest listunspent
+      > digibyte-cli -regtest listunspent
 
    .. highlight:: json
 
@@ -397,10 +397,10 @@ For our two inputs, we select two UTXOs by placing the txid and :ref:`output ind
 
 ::
 
-   > bitcoin-cli -regtest dumpprivkey $UTXO1_ADDRESS
+   > digibyte-cli -regtest dumpprivkey $UTXO1_ADDRESS
    cSp57iWuu5APuzrPGyGc4PGUeCg23PjenZPBPoUs24HtJawccHPm
 
-   > bitcoin-cli -regtest dumpprivkey $UTXO2_ADDRESS
+   > digibyte-cli -regtest dumpprivkey $UTXO2_ADDRESS
    cT26DX6Ctco7pxaUptJujRfbMS2PJvdqiSMaGaoSktHyon8kQUSg
 
    > UTXO1_PRIVATE_KEY=cSp57iWuu5APuzrPGyGc4PGUeCg23PjenZPBPoUs24Ht[...]
@@ -415,9 +415,9 @@ Use the `“dumpprivkey” RPC <../reference/rpc/dumpprivkey.html>`__ to get the
 
 ::
 
-   > bitcoin-cli -regtest getnewaddress
+   > digibyte-cli -regtest getnewaddress
    n4puhBEeEWD2VvjdRC9kQuX2abKxSCMNqN
-   > bitcoin-cli -regtest getnewaddress
+   > digibyte-cli -regtest getnewaddress
    n4LWXU59yM5MzQev7Jx7VNeq1BqZ85ZbLj
 
    > NEW_ADDRESS1=n4puhBEeEWD2VvjdRC9kQuX2abKxSCMNqN
@@ -430,7 +430,7 @@ For our two outputs, get two new addresses.
 ::
 
    ## Outputs - inputs = transaction fee, so always double-check your math!
-   > bitcoin-cli -regtest createrawtransaction '''
+   > digibyte-cli -regtest createrawtransaction '''
        [
          {
            "txid": "'$UTXO1_TXID'", 
@@ -462,7 +462,7 @@ Create the raw transaction using `“createrawtransaction” <../reference/rpc/c
 
    ::
 
-      > bitcoin-cli -regtest signrawtransaction $RAW_TX '[]' '''
+      > digibyte-cli -regtest signrawtransaction $RAW_TX '[]' '''
           [
             "'$UTXO1_PRIVATE_KEY'"
           ]'''
@@ -516,7 +516,7 @@ The result is a raw transaction with only one input signed; the fact that the tr
 
    ::
 
-      > bitcoin-cli -regtest signrawtransaction $PARTLY_SIGNED_RAW_TX '[]' '''
+      > digibyte-cli -regtest signrawtransaction $PARTLY_SIGNED_RAW_TX '[]' '''
           [
             "'$UTXO2_PRIVATE_KEY'"
           ]'''
@@ -587,7 +587,7 @@ Put the previously signed (but not sent) transaction into a shell variable.
 
    ::
 
-      > bitcoin-cli -regtest decoderawtransaction $OLD_SIGNED_RAW_TX
+      > digibyte-cli -regtest decoderawtransaction $OLD_SIGNED_RAW_TX
 
    .. highlight:: json
 
@@ -688,7 +688,7 @@ Decode the signed raw transaction so we can get its txid. Also, choose a specifi
 
 ::
 
-   > bitcoin-cli -regtest getnewaddress
+   > digibyte-cli -regtest getnewaddress
    mfdCHEFL2tW9eEUpizk7XLZJcnFM4hrp78
 
    > NEW_ADDRESS=mfdCHEFL2tW9eEUpizk7XLZJcnFM4hrp78
@@ -700,7 +700,7 @@ Get a new address to spend the satoshis to.
 ::
 
    ## Outputs - inputs = transaction fee, so always double-check your math!
-   > bitcoin-cli -regtest createrawtransaction '''
+   > digibyte-cli -regtest createrawtransaction '''
        [
          {
            "txid": "'$UTXO_TXID'",
@@ -725,7 +725,7 @@ Create the raw transaction the same way we’ve done in the previous subsections
 
    ::
 
-          > bitcoin-cli -regtest signrawtransaction $RAW_TX
+          > digibyte-cli -regtest signrawtransaction $RAW_TX
 
    .. highlight:: json
 
@@ -758,7 +758,7 @@ In this case, you’re spending an output which is unknown to the wallet, so it 
 
    ::
 
-      > bitcoin-cli -regtest signrawtransaction $RAW_TX '''
+      > digibyte-cli -regtest signrawtransaction $RAW_TX '''
           [
             {
               "txid": "'$UTXO_TXID'", 
@@ -800,7 +800,7 @@ This specific operation is typically what offline signing wallets do. The online
 
    ::
 
-      > bitcoin-cli -regtest sendrawtransaction $SIGNED_RAW_TX
+      > digibyte-cli -regtest sendrawtransaction $SIGNED_RAW_TX
 
    .. highlight:: json
 
@@ -814,9 +814,9 @@ Attempt to broadcast the second transaction before we’ve broadcast the first t
 
 ::
 
-   > bitcoin-cli -regtest sendrawtransaction $OLD_SIGNED_RAW_TX
+   > digibyte-cli -regtest sendrawtransaction $OLD_SIGNED_RAW_TX
    682cad881df69cb9df8f0c996ce96ecad758357ded2da03bad40cf18ffbb8e09
-   > bitcoin-cli -regtest sendrawtransaction $SIGNED_RAW_TX
+   > digibyte-cli -regtest sendrawtransaction $SIGNED_RAW_TX
    67d53afa1a8167ca093d30be7fb9dcb8a64a5fdecacec9d93396330c47052c57
 
 Broadcast the first transaction, which succeeds, and then broadcast the second transaction—which also now succeeds because the node now sees the UTXO.
@@ -827,7 +827,7 @@ Broadcast the first transaction, which succeeds, and then broadcast the second t
 
    ::
 
-      > bitcoin-cli -regtest getrawmempool
+      > digibyte-cli -regtest getrawmempool
 
    .. highlight:: json
 
@@ -859,11 +859,11 @@ Creating a multisig address is easy. Multisig outputs have two parameters, the *
 
 ::
 
-       > bitcoin-cli -regtest getnewaddress
+       > digibyte-cli -regtest getnewaddress
        mhAXF4Eq7iRyvbYk1mpDVBiGdLP3YbY6Dm
-       > bitcoin-cli -regtest getnewaddress
+       > digibyte-cli -regtest getnewaddress
        moaCrnRfP5zzyhW8k65f6Rf2z5QpvJzSKe
-       > bitcoin-cli -regtest getnewaddress
+       > digibyte-cli -regtest getnewaddress
        mk2QpYatsKicvFVuTAQLBryyccRXMUaGHP
 
        > NEW_ADDRESS1=mhAXF4Eq7iRyvbYk1mpDVBiGdLP3YbY6Dm
@@ -880,7 +880,7 @@ Recall from the Guide that the hashed public keys used in addresses obfuscate th
 
    ::
 
-      > bitcoin-cli -regtest validateaddress $NEW_ADDRESS3
+      > digibyte-cli -regtest validateaddress $NEW_ADDRESS3
 
    .. highlight:: json
 
@@ -915,7 +915,7 @@ We save the address returned to a shell variable.
 
    ::
 
-      > bitcoin-cli -regtest createmultisig 2 '''
+      > digibyte-cli -regtest createmultisig 2 '''
           [
             "'$NEW_ADDRESS1'",
             "'$NEW_ADDRESS2'", 
@@ -953,7 +953,7 @@ Neither the address nor the redeem script are stored in the wallet when you use 
 
 ::
 
-   > bitcoin-cli -regtest sendtoaddress $P2SH_ADDRESS 10.00
+   > digibyte-cli -regtest sendtoaddress $P2SH_ADDRESS 10.00
    7278d7d030f042ebe633732b512bcb31fff14a697675a1fe1884db139876e175
 
    > UTXO_TXID=7278d7d030f042ebe633732b512bcb31fff14a697675a1fe1884[...]
@@ -968,7 +968,7 @@ We save that txid to a shell variable as the txid of the UTXO we plan to spend n
 
    ::
 
-      > bitcoin-cli -regtest getrawtransaction $UTXO_TXID 1
+      > digibyte-cli -regtest getrawtransaction $UTXO_TXID 1
 
    .. highlight:: json
 
@@ -1044,7 +1044,7 @@ We use the `“getrawtransaction” RPC <../reference/rpc/getrawtransaction.html
 
 ::
 
-   > bitcoin-cli -regtest getnewaddress
+   > digibyte-cli -regtest getnewaddress
    mxCNLtKxzgjg8yyNHeuFSXvxCvagkWdfGU
 
    > NEW_ADDRESS4=mxCNLtKxzgjg8yyNHeuFSXvxCvagkWdfGU
@@ -1056,7 +1056,7 @@ We generate a new P2PKH address to use in the output we’re about to create.
 ::
 
    ## Outputs - inputs = transaction fee, so always double-check your math!
-   > bitcoin-cli -regtest createrawtransaction '''
+   > digibyte-cli -regtest createrawtransaction '''
        [
          {
            "txid": "'$UTXO_TXID'",
@@ -1080,9 +1080,9 @@ We generate the raw transaction the same way we did in the Simple Raw Transactio
 
 ::
 
-   > bitcoin-cli -regtest dumpprivkey $NEW_ADDRESS1
+   > digibyte-cli -regtest dumpprivkey $NEW_ADDRESS1
    cVinshabsALz5Wg4tGDiBuqEGq4i6WCKWXRQdM8RFxLbALvNSHw7
-   > bitcoin-cli -regtest dumpprivkey $NEW_ADDRESS3
+   > digibyte-cli -regtest dumpprivkey $NEW_ADDRESS3
    cNmbnwwGzEghMMe1vBwH34DFHShEj5bcXD1QpFRPHgG9Mj1xc5hq
 
    > NEW_ADDRESS1_PRIVATE_KEY=cVinshabsALz5Wg4tGDiBuqEGq4i6WCKWXRQd[...]
@@ -1098,7 +1098,7 @@ We get the private keys for two of the public keys we used to create the transac
 
    ::
 
-      > bitcoin-cli -regtest signrawtransaction $RAW_TX '''
+      > digibyte-cli -regtest signrawtransaction $RAW_TX '''
           [
             {
               "txid": "'$UTXO_TXID'", 
@@ -1145,7 +1145,7 @@ We make the first signature. The input argument (JSON object) takes the addition
 
    ::
 
-      > bitcoin-cli -regtest signrawtransaction $PARTLY_SIGNED_RAW_TX '''
+      > digibyte-cli -regtest signrawtransaction $PARTLY_SIGNED_RAW_TX '''
           [
             {
               "txid": "'$UTXO_TXID'",
@@ -1193,7 +1193,7 @@ The ``signrawtransaction`` call used here is nearly identical to the one used ab
 
 ::
 
-   > bitcoin-cli -regtest sendrawtransaction $SIGNED_RAW_TX
+   > digibyte-cli -regtest sendrawtransaction $SIGNED_RAW_TX
    430a4cee3a55efb04cbb8718713cab18dea7f2521039aa660ffb5aae14ff3f50
 
 We send the transaction spending the P2SH multisig output to the local node, which accepts it.

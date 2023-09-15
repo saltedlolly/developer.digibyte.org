@@ -97,7 +97,7 @@ If verbosity is 2, returns an Object with information about block 'hash' and inf
 *Example*
 
 {% highlight bash %}
-bitcoin-cli getblock "00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
+digibyte-cli getblock "00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
 {% endhighlight %}
 
 *See also*

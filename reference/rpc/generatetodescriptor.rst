@@ -47,5 +47,5 @@ Examples
 
 Generate 11 blocks to mydesc::
 
-  bitcoin-cli generatetodescriptor 11 "mydesc"
+  digibyte-cli generatetodescriptor 11 "mydesc"
 

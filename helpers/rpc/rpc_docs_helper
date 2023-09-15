@@ -34,9 +34,9 @@ Arguments:
   VERSION           Client version number
 
   For `generate`, `get-help`, and `show-removed` you need to set
-  the environment variable BITCOIN_CLI_CMD to a command able to run the cli.
+  the environment variable DIGIBYTE_CLI_CMD to a command able to run the cli.
   This should include paths and required options if necessary, e.g.
-  `/my/path/bitcoin-cli -regtest`.
+  `/my/path/digibyte-cli -regtest`.
 
 Options:
   -h, --help           Show this help
@@ -49,7 +49,7 @@ import sys
 
 from renderer_markdown import RendererMarkdown
 from renderer_rst import RendererRst
-from cli_bitcoin import CliBitcoin
+from cli_digibyte import CliDigiByte
 from cli_controller import CliController
 
 
@@ -63,16 +63,16 @@ def main():
             renderer = RendererRst(output_dir)
         else:
             renderer = RendererMarkdown(output_dir)
-        controller.generate(CliBitcoin(), renderer, arguments["COMMAND"])
+        controller.generate(CliDigiByte(), renderer, arguments["COMMAND"])
     elif arguments["get-help"]:
-        controller.get_help(CliBitcoin(), arguments["COMMAND"])
+        controller.get_help(CliDigiByte(), arguments["COMMAND"])
     elif arguments["import-see-also"]:
         controller.import_see_also(
             arguments["MARKDOWN_DIR"], arguments["ANNOTATIONS_FILE"])
     elif arguments["clean-annotations"]:
         controller.clean_annotations(arguments["ANNOTATIONS_FILE"])
     elif arguments["show-removed"]:
-        controller.show_removed(CliBitcoin(), arguments["MARKDOWN_DIR"])
+        controller.show_removed(CliDigiByte(), arguments["MARKDOWN_DIR"])
     elif arguments["mark-removed"]:
         controller.mark_removed(arguments["ANNOTATIONS_FILE"],
             arguments["VERSION"], arguments["COMMAND"])
@@ -80,9 +80,9 @@ def main():
         controller.mark_added(arguments["ANNOTATIONS_FILE"],
             arguments["VERSION"], arguments["COMMAND"])
     elif arguments["show-missing"]:
-        controller.show_missing(CliBitcoin(), arguments["ANNOTATIONS_FILE"])
+        controller.show_missing(CliDigiByte(), arguments["ANNOTATIONS_FILE"])
     elif arguments["update-references"]:
-        controller.update_references(CliBitcoin(), arguments["--docs-dir"])
+        controller.update_references(CliDigiByte(), arguments["--docs-dir"])
     else:
         sys.exit("Unknown command. Exiting.")
 

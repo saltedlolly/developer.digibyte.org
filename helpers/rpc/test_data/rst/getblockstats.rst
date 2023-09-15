@@ -85,9 +85,9 @@ Examples
 
 ::
 
-  bitcoin-cli getblockstats 1000 '["minfeerate","avgfeerate"]'
+  digibyte-cli getblockstats 1000 '["minfeerate","avgfeerate"]'
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockstats", "params": [1000 '["minfeerate","avgfeerate"]'] }' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockstats", "params": [1000 '["minfeerate","avgfeerate"]'] }' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

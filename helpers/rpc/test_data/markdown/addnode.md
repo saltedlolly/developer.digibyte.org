@@ -51,7 +51,7 @@ full nodes/support SegWit as other outbound peers are (though such peers will no
 *Example*
 
 {% highlight bash %}
-bitcoin-cli addnode "192.168.0.6:8333" "onetry"
+digibyte-cli addnode "192.168.0.6:8333" "onetry"
 {% endhighlight %}
 
 *See also*

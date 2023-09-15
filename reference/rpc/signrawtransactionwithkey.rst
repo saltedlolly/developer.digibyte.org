@@ -98,9 +98,9 @@ Examples
 
 ::
 
-  bitcoin-cli signrawtransactionwithkey "myhex" "[\"key1\",\"key2\"]"
+  digibyte-cli signrawtransactionwithkey "myhex" "[\"key1\",\"key2\"]"
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "signrawtransactionwithkey", "params": ["myhex", "[\"key1\",\"key2\"]"]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "signrawtransactionwithkey", "params": ["myhex", "[\"key1\",\"key2\"]"]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

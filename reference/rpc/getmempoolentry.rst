@@ -60,9 +60,9 @@ Examples
 
 ::
 
-  bitcoin-cli getmempoolentry "mytxid"
+  digibyte-cli getmempoolentry "mytxid"
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getmempoolentry", "params": ["mytxid"]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getmempoolentry", "params": ["mytxid"]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

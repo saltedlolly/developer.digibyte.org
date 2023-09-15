@@ -63,13 +63,13 @@ Examples
 
 Import an address with rescan::
 
-  bitcoin-cli importaddress "myaddress"
+  digibyte-cli importaddress "myaddress"
 
 Import using a label without rescan::
 
-  bitcoin-cli importaddress "myaddress" "testing" false
+  digibyte-cli importaddress "myaddress" "testing" false
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "importaddress", "params": ["myaddress", "testing", false]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "importaddress", "params": ["myaddress", "testing", false]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 
