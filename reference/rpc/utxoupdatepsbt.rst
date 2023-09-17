@@ -54,5 +54,5 @@ Examples
 
 ::
 
-  bitcoin-cli utxoupdatepsbt "psbt"
+  digibyte-cli utxoupdatepsbt "psbt"
 

@@ -28,7 +28,7 @@ The `getbestblockhash` RPC {{summary_getBestBlockHash}}
 *Example*
 
 {% highlight bash %}
-bitcoin-cli getbestblockhash
+digibyte-cli getbestblockhash
 {% endhighlight %}
 
 *See also*

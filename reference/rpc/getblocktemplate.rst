@@ -101,9 +101,9 @@ Examples
 
 ::
 
-  bitcoin-cli getblocktemplate '{"rules": ["segwit"]}'
+  digibyte-cli getblocktemplate '{"rules": ["segwit"]}'
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getblocktemplate", "params": [{"rules": ["segwit"]}]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getblocktemplate", "params": [{"rules": ["segwit"]}]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

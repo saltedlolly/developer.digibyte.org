@@ -59,13 +59,13 @@ Examples
 
 Get unspent transactions::
 
-  bitcoin-cli listunspent
+  digibyte-cli listunspent
 
 View the details::
 
-  bitcoin-cli gettxout "txid" 1
+  digibyte-cli gettxout "txid" 1
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "gettxout", "params": ["txid", 1]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "gettxout", "params": ["txid", 1]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

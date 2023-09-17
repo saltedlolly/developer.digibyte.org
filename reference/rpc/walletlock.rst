@@ -26,17 +26,17 @@ Examples
 
 Set the passphrase for 2 minutes to perform a transaction::
 
-  bitcoin-cli walletpassphrase "my pass phrase" 120
+  digibyte-cli walletpassphrase "my pass phrase" 120
 
 Perform a send (requires passphrase set)::
 
-  bitcoin-cli sendtoaddress "bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl" 1.0
+  digibyte-cli sendtoaddress "bc1q09vm5lfy0j5reeulh4x5752q25uqqvz34hufdl" 1.0
 
 Clear the passphrase since we are done before 2 minutes is up::
 
-  bitcoin-cli walletlock
+  digibyte-cli walletlock
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "walletlock", "params": []}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "walletlock", "params": []}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

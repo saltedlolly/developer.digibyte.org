@@ -51,17 +51,17 @@ Examples
 
 Create a transaction::
 
-  bitcoin-cli createrawtransaction "[{\"txid\" : \"mytxid\",\"vout\":0}]" "{\"myaddress\":0.01}"
+  digibyte-cli createrawtransaction "[{\"txid\" : \"mytxid\",\"vout\":0}]" "{\"myaddress\":0.01}"
 
 Sign the transaction, and get back the hex::
 
-  bitcoin-cli signrawtransactionwithwallet "myhex"
+  digibyte-cli signrawtransactionwithwallet "myhex"
 
 Send the transaction (signed hex)::
 
-  bitcoin-cli sendrawtransaction "signedhex"
+  digibyte-cli sendrawtransaction "signedhex"
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "sendrawtransaction", "params": ["signedhex"]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "sendrawtransaction", "params": ["signedhex"]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

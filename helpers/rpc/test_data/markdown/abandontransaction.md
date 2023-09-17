@@ -46,7 +46,7 @@ It has no effect on transactions which are already abandoned.
 *Example*
 
 {% highlight bash %}
-bitcoin-cli abandontransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"
+digibyte-cli abandontransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"
 {% endhighlight %}
 
 *See also*

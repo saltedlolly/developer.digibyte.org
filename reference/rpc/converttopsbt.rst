@@ -57,9 +57,9 @@ Examples
 
 Create a transaction::
 
-  bitcoin-cli createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "[{\"data\":\"00010203\"}]"
+  digibyte-cli createrawtransaction "[{\"txid\":\"myid\",\"vout\":0}]" "[{\"data\":\"00010203\"}]"
 
 Convert the transaction to a PSBT::
 
-  bitcoin-cli converttopsbt "rawtransaction"
+  digibyte-cli converttopsbt "rawtransaction"
 

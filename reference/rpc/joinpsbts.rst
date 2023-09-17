@@ -44,5 +44,5 @@ Examples
 
 ::
 
-  bitcoin-cli joinpsbts "psbt"
+  digibyte-cli joinpsbts "psbt"
 

@@ -42,9 +42,9 @@ Examples
 
 ::
 
-  bitcoin-cli addnode "192.168.0.6:8333" "onetry"
+  digibyte-cli addnode "192.168.0.6:8333" "onetry"
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "addnode", "params": ["192.168.0.6:8333", "onetry"]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

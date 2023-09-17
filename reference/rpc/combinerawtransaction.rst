@@ -46,5 +46,5 @@ Examples
 
 ::
 
-  bitcoin-cli combinerawtransaction '["myhex1", "myhex2", "myhex3"]'
+  digibyte-cli combinerawtransaction '["myhex1", "myhex2", "myhex3"]'
 

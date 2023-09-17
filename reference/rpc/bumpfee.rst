@@ -89,5 +89,5 @@ Examples
 
 Bump the fee, get the new transaction'stxid::
 
-  bitcoin-cli bumpfee <txid>
+  digibyte-cli bumpfee <txid>
 

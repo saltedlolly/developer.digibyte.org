@@ -90,7 +90,7 @@ If 'label' is specified, assign address to that label.
 Add a multisig address from 2 addresses
 
 {% highlight bash %}
-bitcoin-cli addmultisigaddress 2 "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"
+digibyte-cli addmultisigaddress 2 "[\"16sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\",\"171sgjn4YtPu27adkKGrdDwzRTxnRkBfKV\"]"
 {% endhighlight %}
 
 *See also*

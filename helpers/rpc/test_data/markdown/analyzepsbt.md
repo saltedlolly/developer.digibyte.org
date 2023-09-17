@@ -59,7 +59,7 @@ The `analyzepsbt` RPC {{summary_analyzePsbt}}
 *Example*
 
 {% highlight bash %}
-bitcoin-cli analyzepsbt "psbt"
+digibyte-cli analyzepsbt "psbt"
 {% endhighlight %}
 
 {% endautocrossref %}

@@ -46,5 +46,5 @@ Examples
 
 ::
 
-  bitcoin-cli finalizepsbt "psbt"
+  digibyte-cli finalizepsbt "psbt"
 

@@ -40,6 +40,6 @@ Result:
 "hex"      (string) the result, hex encoded
 
 Examples:
-> bitcoin-cli examplecommand foo
+> digibyte-cli examplecommand foo
 > curl --user myusername --data-binary someargs
 

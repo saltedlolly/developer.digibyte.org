@@ -51,13 +51,13 @@ Examples
 
 ::
 
-  bitcoin-cli setban "192.168.0.6" "add" 86400
+  digibyte-cli setban "192.168.0.6" "add" 86400
 
 ::
 
-  bitcoin-cli setban "192.168.0.0/24" "add"
+  digibyte-cli setban "192.168.0.0/24" "add"
 
 ::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "setban", "params": ["192.168.0.6", "add", 86400]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "setban", "params": ["192.168.0.6", "add", 86400]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

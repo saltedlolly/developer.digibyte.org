@@ -60,13 +60,13 @@ Examples
 
 The total amount in the wallet with 0 or more confirmations::
 
-  bitcoin-cli getbalance
+  digibyte-cli getbalance
 
 The total amount in the wallet with at least 6 confirmations::
 
-  bitcoin-cli getbalance "*" 6
+  digibyte-cli getbalance "*" 6
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getbalance", "params": ["*", 6]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "getbalance", "params": ["*", 6]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

@@ -32,7 +32,7 @@ Ping command is handled in queue with all other commands, so it measures process
 *Example*
 
 {% highlight bash %}
-bitcoin-cli ping
+digibyte-cli ping
 {% endhighlight %}
 
 *See also*

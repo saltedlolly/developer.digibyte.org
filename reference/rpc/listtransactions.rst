@@ -92,13 +92,13 @@ Examples
 
 List the most recent 10 transactions in the systems::
 
-  bitcoin-cli listtransactions
+  digibyte-cli listtransactions
 
 List transactions 100 to 120::
 
-  bitcoin-cli listtransactions "*" 20 100
+  digibyte-cli listtransactions "*" 20 100
 
 As a JSON-RPC call::
 
-  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "listtransactions", "params": ["*", 20, 100]}' -H 'content-type: text/plain;' http://127.0.0.1:8332/
+  curl --user myusername --data-binary '{"jsonrpc": "1.0", "id": "curltest", "method": "listtransactions", "params": ["*", 20, 100]}' -H 'content-type: text/plain;' http://127.0.0.1:14022/
 

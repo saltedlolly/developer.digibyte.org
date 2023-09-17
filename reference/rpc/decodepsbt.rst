@@ -117,5 +117,5 @@ Examples
 
 ::
 
-  bitcoin-cli decodepsbt "psbt"
+  digibyte-cli decodepsbt "psbt"
 
